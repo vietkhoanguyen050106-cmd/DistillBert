@@ -2,7 +2,7 @@ import argparse
 import subprocess
 import sys
  
-from config import TEACHER_DIR, is_trained, student_dir
+from Bert.config import TEACHER_DIR, is_trained, student_dir
  
  
 def run(module, *extra):
@@ -19,19 +19,18 @@ def main():
     args = parser.parse_args()
  
     if not is_trained(TEACHER_DIR):
-        run("Bert.train_teacher")
+        run("Bert.Train_teacher")
  
     for init in args.inits:
         sizes = args.layers if init == "scratch" else [6]   # pretrained DistilBERT = 6 layers
         for layers in sizes:
             extra = ["--init", init, "--layers", str(layers)]
             if not is_trained(student_dir("baseline", init, layers)):
-                run("Bert.train_student", *extra)
+                run("Bert.Train_student", *extra)
             if not is_trained(student_dir("distill", init, layers)):
-                run("Bert.train_distill", *extra)
+                run("Bert.Train_distill", *extra)
  
-    run("Bert.benchmark")
-    run("Bert.plot_curves")
+    run("Bert.benchmark") 
  
  
 if __name__ == "__main__":

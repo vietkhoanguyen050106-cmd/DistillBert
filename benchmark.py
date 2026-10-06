@@ -9,9 +9,9 @@ import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from transformers import AutoModelForSequenceClassification, DataCollatorWithPadding
  
-from config import OUTPUT_ROOT, TEACHER_DIR
-from dataset import load_sst2
-from utils import count_parameters
+from Bert.config import OUTPUT_ROOT, TEACHER_DIR
+from Bert.dataset import load_sst2
+from Bert.utils import count_parameters
  
  
 def sync(device):

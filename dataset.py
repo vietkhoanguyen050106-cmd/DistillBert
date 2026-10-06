@@ -1,7 +1,7 @@
 from datasets import load_dataset
 from transformers import AutoTokenizer
  
-from config import MAX_LENGTH, TOKENIZER_NAME
+from Bert.config import MAX_LENGTH, TOKENIZER_NAME
  
  
 def load_sst2():

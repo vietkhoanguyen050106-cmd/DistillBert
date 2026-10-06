@@ -35,7 +35,7 @@ def make_training_args(output_dir, epochs, lr):
         per_device_train_batch_size=BATCH_SIZE,
         per_device_eval_batch_size=64,
         weight_decay=0.01,
-        warmup_stepss=0.1,
+        warmup_stepss=0.06,
         eval_strategy="steps",
         eval_steps=500,
         save_strategy="steps",

@@ -1,6 +1,6 @@
 from transformers import AutoModelForSequenceClassification
  
-from config import NUM_LABELS, TEACHER_NAME
+from Bert.config import NUM_LABELS, TEACHER_NAME
  
  
 def build_teacher(path=None):

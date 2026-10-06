@@ -1,6 +1,6 @@
 from transformers import AutoConfig, AutoModelForSequenceClassification, set_seed
  
-from config import NUM_LABELS, SEED, STUDENT_NAME
+from Bert.config import NUM_LABELS, SEED, STUDENT_NAME
  
  
 def build_student(init="scratch", num_layers=6):

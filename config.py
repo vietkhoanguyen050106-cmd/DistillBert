@@ -7,7 +7,7 @@ TOKENIZER_NAME = "bert-base-uncased"        # DistilBERT uses exactly the BERT-u
 NUM_LABELS = 2                              # SST-2: 0 = negative, 1 = positive
 MAX_LENGTH = 128
 SEED = 42
-BATCH_SIZE = 32
+BATCH_SIZE = 8
  
 # ----- Learning rate / epochs ------------------------------------------------
 # A pretrained model is only *adjusted*, so it needs a small learning rate (and few
@@ -23,7 +23,7 @@ STUDENT_DEFAULTS = {
 # ----- Distillation hyper-parameters ----------------------------------------
 TEMPERATURE = 2.0   # T: softens the teacher's probabilities
 ALPHA = 0.5         # weight of the hard-label loss; (1 - ALPHA) is the weight of the teacher loss
-BETA = 0.0          # weight of the optional hidden-state (cosine) loss; 0 = disabled
+BETA = 1.0          # weight of the optional hidden-state (cosine) loss; 0 = disabled
  
 # ----- Output locations -----------------------------------------------------
 OUTPUT_ROOT = "./outputs"

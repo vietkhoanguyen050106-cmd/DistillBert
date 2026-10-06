@@ -5,11 +5,11 @@ import torch.nn.functional as F
 from transformers import DataCollatorWithPadding, Trainer
 from transformers.modeling_outputs import SequenceClassifierOutput
  
-from config import ALPHA, BETA, STUDENT_DEFAULTS, TEACHER_DIR, TEMPERATURE, student_dir
-from dataset import load_sst2
-from Model_student import build_student
-from Model_teacher import build_teacher
-from utils import compute_metrics, count_parameters, make_training_args, save_history
+from Bert.config import ALPHA, BETA, STUDENT_DEFAULTS, TEACHER_DIR, TEMPERATURE, student_dir
+from Bert.dataset import load_sst2
+from Bert.Model_student import build_student
+from Bert.Model_teacher import build_teacher
+from Bert.utils import compute_metrics, count_parameters, make_training_args, save_history
  
  
 class DistillationTrainer(Trainer):

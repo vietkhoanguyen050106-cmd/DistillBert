@@ -3,7 +3,7 @@ import numpy as np
 import torch
 from transformers import TrainingArguments
  
-from config import BATCH_SIZE, SEED
+from Bert.config import BATCH_SIZE, SEED
  
 _accuracy = evaluate.load("accuracy")
  
@@ -35,7 +35,7 @@ def make_training_args(output_dir, epochs, lr):
         per_device_train_batch_size=BATCH_SIZE,
         per_device_eval_batch_size=64,
         weight_decay=0.01,
-        warmup_ratio=0.1,
+        warmup_stepss=0.1,
         eval_strategy="steps",
         eval_steps=500,
         save_strategy="steps",

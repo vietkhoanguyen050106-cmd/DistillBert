@@ -14,7 +14,7 @@ def load_sst2():
         print(dataset["train"][0])
     """
     tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_NAME)
-    raw_dataset = load_dataset("glue", "sst2")
+    raw_dataset = load_dataset("stanfordnlp/sst2")
  
     def tokenize_batch(batch):
         # return_token_type_ids=False: DistilBERT has no token-type embeddings and

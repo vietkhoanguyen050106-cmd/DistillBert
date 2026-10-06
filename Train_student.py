@@ -2,10 +2,10 @@ import argparse
  
 from transformers import DataCollatorWithPadding, Trainer
  
-from config import STUDENT_DEFAULTS, student_dir
-from dataset import load_sst2
-from Model_student import build_student
-from utils import compute_metrics, count_parameters, make_training_args, save_history
+from Bert.config import STUDENT_DEFAULTS, student_dir
+from Bert.dataset import load_sst2
+from Bert.Model_student import build_student
+from Bert.utils import compute_metrics, count_parameters, make_training_args, save_history
  
  
 def main():

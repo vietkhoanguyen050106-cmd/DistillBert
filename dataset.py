@@ -1,4 +1,4 @@
-from dataset import load_dataset
+from datasets import load_dataset
 from transformers import AutoTokenizer
  
 from config import MAX_LENGTH, TOKENIZER_NAME
